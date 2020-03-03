@@ -19,8 +19,10 @@ export default class TileResolver
         const tile = this.matrix.get(indexX, indexY);
         if (tile)
         {
+            const y1 = indexY * this.tileSize;
             return {
                 tile,
+                y1,
             };
         }
     }
