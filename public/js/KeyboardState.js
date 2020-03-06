@@ -12,16 +12,16 @@ export default class KeyboardState
         this.keyMap = new Map();
     }
 
-    addMapping(keyCode, callback)
+    addMapping(code, callback)
     {
-        this.keyMap.set(keyCode, callback);
+        this.keyMap.set(code, callback);
     }
 
     handleEvent(event)
     {
-        const {keyCode} = event;
+        const {code} = event;
 
-        if (!this.keyMap.has(keyCode))
+        if (!this.keyMap.has(code))
         {
             return;
         }
@@ -31,13 +31,13 @@ export default class KeyboardState
 
         // Check whether the keyState in the keyCode
         // has been changed (PRESSED -> RELEASED | RELEASED -> PRESSED)
-        if (this.keyStates.get(keyCode) === keyState)
+        if (this.keyStates.get(code) === keyState)
         {
             return;
         }
-        this.keyStates.set(keyCode, keyState);
+        this.keyStates.set(code, keyState);
         console.log(this.keyStates);
-        this.keyMap.get(keyCode)(keyState);
+        this.keyMap.get(code)(keyState);
     }
 
     listenTo(window)
