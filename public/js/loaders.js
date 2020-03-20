@@ -2,6 +2,7 @@ import Level from './Level.js';
 import {createBackgroundLayer, createSpriteLayer} from './layers.js';
 import SpriteSheet from './SpriteSheet.js';
 import {createAnim} from './anim.js';
+import Queue from './Queue.js';
 
 export function loadImage(url) 
 {
@@ -58,6 +59,17 @@ backgrounds.forEach(background => {
         }
     });
 });
+}
+
+function createQueue(queue, backgrounds)
+{
+    backgrounds.forEach(background => {
+        if (background.subtype === "letter")
+        {  
+            queue.enqueue(background.letter);
+        }
+        return queue;
+    });
 }
             
 export function loadSpriteSheet(name)
@@ -123,5 +135,19 @@ export function loadLevel(name) {
         level.comp.layers.push(spriteLayer);
 
         return level;
+    });
+}
+
+export function loadQueue(name) {
+    return loadJSON(`/levels/${name}.json`)
+    .then(levelSpec => Promise.all([
+        levelSpec, 
+        loadSpriteSheet(levelSpec.spriteSheet),
+        ]))
+    .then(([levelSpec, backgroundSprites]) => {
+        const queue = new Queue();
+        createQueue(queue, levelSpec.backgrounds);
+
+        return queue;
     });
 }

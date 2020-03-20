@@ -1,0 +1,33 @@
+import {Trait} from '../Entity.js';
+export default class Leap extends Trait
+{
+    constructor()
+    {
+        super('leap');
+        this.duration = 0.5;
+        this.velocityY = 150;
+        this.velocityX = 190;
+        this.engageTime = 0;
+
+    }
+
+    start()
+    {
+        this.engageTime = this.duration;
+    }
+
+    cancel()
+    {
+        this.engageTime = 0;
+    }
+
+    update(entity, deltaTime)
+    {
+        if (this.engageTime > 0)
+        {
+            entity.vel.y = -this.velocityY;
+            entity.vel.x = this.velocityX;
+            this.engageTime -= deltaTime;
+        }
+    }
+}

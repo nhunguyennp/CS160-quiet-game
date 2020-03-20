@@ -35,7 +35,128 @@
         {
             "name": "chance-3",
             "index": [26, 0]
+        },
+        {
+            "name": "letter-a",
+            "letter": "A",
+            "index": [0, 4]
+        },
+        {
+            "name": "letter-b",
+            "letter": "B",
+            "index": [1, 4]
+        },
+        {
+            "name": "letter-c",
+            "letter": "C",
+            "index": [2, 4]
+        },
+        {
+            "name": "letter-d",
+            "letter": "D",
+            "index": [3, 4]
+        },
+        {
+            "name": "letter-e",
+            "letter": "E",
+            "index": [4, 4]
+        },
+        {
+            "name": "letter-f",
+            "letter": "F",
+            "index": [5, 4]
+        },
+        {
+            "name": "letter-g",
+            "letter": "G",
+            "index": [6, 4]
+        },
+        {
+            "name": "letter-h",
+            "letter": "H",
+            "index": [7, 4]
+        },
+        {
+            "name": "letter-i",
+            "letter": "I",
+            "index": [8, 4]
+        },
+        {
+            "name": "letter-k",
+            "letter": "K",
+            "index": [9, 4]
+        },
+        {
+            "name": "letter-l",
+            "letter": "L",
+            "index": [10, 4]
+        },
+        {
+            "name": "letter-m",
+            "letter": "M",
+            "index": [11, 4]
+        },
+        {
+            "name": "letter-n",
+            "letter": "N",
+            "index": [12, 4]
+        },
+        {
+            "name": "letter-o",
+            "letter": "O",
+            "index": [13, 4]
+        },
+        {
+            "name": "letter-p",
+            "letter": "P",
+            "index": [14, 4]
+        },
+        {
+            "name": "letter-q",
+            "letter": "Q",
+            "index": [15, 4]
+        },
+        {
+            "name": "letter-r",
+            "letter": "R",
+            "index": [16, 4]
+        },
+        {
+            "name": "letter-s",
+            "letter": "S",
+            "index": [17, 4]
+        },
+        {
+            "name": "letter-t",
+            "letter": "T",
+            "index": [18, 4]
+        },
+        {
+            "name": "letter-u",
+            "letter": "U",
+            "index": [19, 4]
+        },
+        {
+            "name": "letter-v",
+            "letter": "V",
+            "index": [20, 4]
+        },
+        {
+            "name": "letter-w",
+            "letter": "W",
+            "index": [21, 4]
+        },
+        {
+            "name": "letter-x",
+            "letter": "X",
+            "index": [22, 4]
+        },
+        {
+            "name": "letter-y",
+            "letter": "Y",
+            "index": [23, 4]
         }
+
     ],
 
     "animations": [

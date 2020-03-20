@@ -43,35 +43,11 @@
             "type": "ground",
             "ranges": [
                 [
-                    5, 3,
-                    9, 1
-                ],
-                [
                     29, 5
-                ],
-                [
-                    5, 7,
-                    9
-                ],
-                [
-                    12, 6,
-                    11, 1
                 ],
                 [
                     2, 1,
                     11, 1
-                ],
-                [
-                    10, 2,
-                    10, 1
-                ],
-                [
-                    10, 2,
-                    10
-                ],
-                [
-                    9, 1,
-                    0, 7
                 ]
             ]
         },
@@ -81,11 +57,11 @@
             "ranges": [
                 [
                     27, 5,
-                    9
+                    4
                 ],
                 [
                     83, 3,
-                    9
+                    4
                 ],
                 [
                     86, 6,
@@ -96,11 +72,11 @@
                     5
                 ],
                 [
-                    99, 9
+                    99, 4
                 ],
                 [
                     105, 2,
-                    9
+                    4
                 ],
                 [
                     123, 5
@@ -115,11 +91,11 @@
                 ],
                 [
                     133, 2,
-                    9
+                    4
                 ],
                 [
                     171, 4,
-                    9
+                    4
                 ]
             ]
         },
@@ -128,17 +104,17 @@
             "type": "ground",
             "ranges": [
                 [2, 9],
-                [23, 9],
-                [28, 9],
-                [30, 9],
-                [29, 5],
-                [84, 9],
+                [23, 4],
+                [28, 4],
+                [30, 5],
+                [29, 4],
+                [84, 4],
                 [99, 5],
 
                 [114, 5],
-                [111, 9],
-                [114, 9],
-                [117, 9],
+                [111, 4],
+                [114, 4],
+                [117, 4],
 
                 [133, 2, 5],
 
@@ -147,37 +123,223 @@
             ]
         },
         {
-            "tile": "chocolate",
+            "tile": "letter-a",
             "type": "ground",
+            "subtype": "letter",
+            "letter": "A",
             "ranges": [
-                [141, 1, 9],
-                [140, 2, 10],
-                [139, 3, 11],
-                [138, 4, 12],
+                [7, 12]
 
-                [144, 1, 9],
-                [144, 2, 10],
-                [144, 3, 11],
-                [144, 4, 12],
+            ]
+        },
+        {
+            "tile": "letter-b",
+            "type": "ground",
+            "subtype": "letter",
+            "letter": "B",
+            "ranges": [
+                [13, 12]
 
-                [155, 2, 9],
-                [154, 3, 10],
-                [153, 4, 11],
-                [152, 5, 12],
+            ]
+        },
+        {
+            "tile": "letter-c",
+            "type": "ground",
+            "subtype": "letter",
+            "letter": "C",
+            "ranges": [
+                [19, 12]
 
-                [159, 1, 9],
-                [159, 2, 10],
-                [159, 3, 11],
-                [159, 4, 12],
+            ]
+        },
+        {
+            "tile": "letter-d",
+            "type": "ground",
+            "subtype": "letter",
+            "letter": "D",
+            "ranges": [
+                [25, 12]
 
-                [191, 2, 5],
-                [190, 3, 6],
-                [189, 4, 7],
-                [188, 5, 8],
-                [187, 6, 9],
-                [186, 7, 10],
-                [185, 8, 11],
-                [184, 9, 12]
+            ]
+        },
+        {
+            "tile": "letter-e",
+            "type": "ground",
+            "subtype": "letter",
+            "letter": "E",
+            "ranges": [
+                [31, 12]
+            ]
+        },
+        {
+            "tile": "letter-f",
+            "type": "ground",
+            "subtype": "letter",
+            "letter": "F",
+            "ranges": [
+                [37, 12]
+            ]
+        },
+        {
+            "tile": "letter-g",
+            "type": "ground",
+            "subtype": "letter",
+            "letter": "G",
+            "ranges": [
+                [43, 12]
+            ]
+        },
+        {
+            "tile": "letter-h",
+            "type": "ground",
+            "subtype": "letter",
+            "letter": "H",
+            "ranges": [
+                [49, 12]
+            ]
+        },
+        {
+            "tile": "letter-i",
+            "type": "ground",
+            "subtype": "letter",
+            "letter": "I",
+            "ranges": [
+                [55, 12]
+            ]
+        },
+        {
+            "tile": "letter-k",
+            "type": "ground",
+            "subtype": "letter",
+            "letter": "K",
+            "ranges": [
+                [61, 12]
+            ]
+        },
+        {
+            "tile": "letter-l",
+            "type": "ground",
+            "subtype": "letter",
+            "letter": "L",
+            "ranges": [
+                [67, 12]
+            ]
+        },
+        {
+            "tile": "letter-m",
+            "type": "ground",
+            "subtype": "letter",
+            "letter": "M",
+            "ranges": [
+                [73, 12]
+            ]
+        },
+        {
+            "tile": "letter-n",
+            "type": "ground",
+            "subtype": "letter",
+            "letter": "N",
+            "ranges": [
+                [79, 12]
+            ]
+        },
+        {
+            "tile": "letter-o",
+            "type": "ground",
+            "subtype": "letter",
+            "letter": "O",
+            "ranges": [
+                [85, 12]
+            ]
+        },
+        {
+            "tile": "letter-p",
+            "type": "ground",
+            "subtype": "letter",
+            "letter": "P",
+            "ranges": [
+                [91, 12]
+            ]
+        },
+        {
+            "tile": "letter-q",
+            "type": "ground",
+            "subtype": "letter",
+            "letter": "Q",
+            "ranges": [
+                [97, 12]
+            ]
+        },
+        {
+            "tile": "letter-r",
+            "type": "ground",
+            "subtype": "letter",
+            "letter": "R",
+            "ranges": [
+                [103, 12]
+            ]
+        },
+        {
+            "tile": "letter-s",
+            "type": "ground",
+            "subtype": "letter",
+            "letter": "S",
+            "ranges": [
+                [109, 12]
+            ]
+        },
+        {
+            "tile": "letter-t",
+            "type": "ground",
+            "subtype": "letter",
+            "letter": "T",
+            "ranges": [
+                [115, 12]
+            ]
+        },
+        {
+            "tile": "letter-u",
+            "type": "ground",
+            "subtype": "letter",
+            "letter": "U",
+            "ranges": [
+                [121, 12]
+            ]
+        },
+        {
+            "tile": "letter-v",
+            "type": "ground",
+            "subtype": "letter",
+            "letter": "V",
+            "ranges": [
+                [127, 12]
+            ]
+        },
+        {
+            "tile": "letter-w",
+            "type": "ground",
+            "subtype": "letter",
+            "letter": "W",
+            "ranges": [
+                [133, 12]
+            ]
+        },
+        {
+            "tile": "letter-x",
+            "type": "ground",
+            "subtype": "letter",
+            "letter": "X",
+            "ranges": [
+                [139, 12]
+            ]
+        },
+        {
+            "tile": "letter-y",
+            "type": "ground",
+            "subtype": "letter",
+            "letter": "Y",
+            "ranges": [
+                [145, 12]
             ]
         }
     ]
