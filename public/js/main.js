@@ -49,5 +49,14 @@ Promise.all([
                 }
                 level.comp.draw(context, camera);
         }
+        var video = document.querySelector('#video');
+        if(navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+        video.srcObject = stream;
+        })
+        .catch(function (error) {
+            console.log("Webcam went wrong");
+        });
+    }
         timer.start();
 });

@@ -2,10 +2,26 @@
 <html>
 <head>
     <title>A Quiet Game</title>
+    <link rel="stylesheet" href="./styles.css">
+    
+
     <script type="module" src="/js/main.js"></script>
 </head>
 
 <body>
-   <canvas id="screen" width="640" height="640"></canvas>
+	<header>
+    Play the Game using your <b>Hand</b> as controller via <b>Web Camera</b>.
+  	</header>
+
+  	<div id="no-webcam">
+      No webcam found. <br/>
+      To play this game, use a device with a webcam.
+    </div>
+   	<canvas id="screen" width="272" height="240"></canvas>
+	<center><video id="video" autoplay playsinline muted width="272" height="240"></video></center>
+
+
+
+
 </body>
 </html>
