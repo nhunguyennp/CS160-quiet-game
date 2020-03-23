@@ -185,6 +185,7 @@ canvas {
 }
 .webcam-box-outer {
   background: black;
+  flex-grow: 1;
   border: 1px solid #585858;
   border-radius: 4px;
   box-sizing: border-box;
@@ -198,7 +199,8 @@ canvas {
   display: flex;
   justify-content: center;
   overflow: hidden;
-  width: 160px;
+  margin: auto;
+  width: 272px;
 }
 #webcam {
   height: 160px;
@@ -263,21 +265,21 @@ canvas {
   margin-top: 13px;
 }
 .panel-cell .help-text {
-  font-size: 10px;
+  font-size: 12px;
   font-style: italic;
-  left: 0;
+  left: 360px;
   line-height: 1.1;
   margin: 0;
   padding: 0;
   text-align: left;
-  top: 0;
+  top: 50px;
   position: absolute;
 }
 .panel-row-top .panel-cell-left {
-  background: url("./images/pointer.svg");
+  background: url("./pointer.svg");
   background-repeat: no-repeat;
-  background-size: 38%;
-  background-position: 98% 46%;
+  background-size: 10%;
+  background-position: 90% 46%;
 }
 .panel-row-middle .panel-cell {
   height: 132px;
@@ -355,3 +357,10 @@ canvas {
   line-height: 30px;
 }
 
+/*#screen
+{
+    width: 408px;
+    height: 360px;
+    margin: 0px auto;
+    border: 1px solid red;
+}*/
