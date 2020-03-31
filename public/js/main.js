@@ -10,6 +10,10 @@ import Queue from './Queue.js';
 const canvas = document.getElementById('screen');
 const context = canvas.getContext('2d');
 
+let model, webcam, labelContainer, maxPredictions;
+const webcamElement = document.getElementById('webcam');
+const URL = "https://teachablemachine.withgoogle.com/models/9neG499OG/";
+
 
 // Promize.all to loadBackgroundSprites() and loadLevel()
 // at the same time
@@ -59,4 +63,48 @@ Promise.all([
         });
     }
         timer.start();
+
+        window.init = async function init()
+        {
+             const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
+
+            // Load the model and metadata
+            model = await tmImage.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+
+            const flip = true;
+            webcam = new tmImage.Webcam(272, 240, flip);
+            await webcam.setup();
+            await webcam.play();
+            window.requestAnimationFrame(loop);
+
+            document.getElementById('webcam-container').appendChild(webcam.canvas);
+            labelContainer = document.getElementById("label-container");
+
+            // Add label for each class
+            for (let i = 0; i < maxPredictions; i++)
+            {
+                labelContainer.appendChild(document.createElement("div"));
+            }
+        }
+
+        window.loop = async function loop()
+        {
+            // Update the webcam frame and wait for prediction
+            webcam.update();
+            await predict();
+            window.requestAnimationFrame(loop);
+        }
+
+        window.predict = async function predict()
+        {
+            const prediction = await model.predict(webcam.canvas);
+            for (let i = 0; i < maxPredictions; i++)
+            {
+                const classPrediction = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                labelContainer.childNodes[i].innerHTML = classPrediction;
+            }
+        }
+
 });

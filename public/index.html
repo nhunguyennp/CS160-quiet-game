@@ -3,12 +3,21 @@
 <head>
     <title>A Quiet Game</title>
     <link rel="stylesheet" href="./styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.10.0/dist/tf.min.js"></script>
     
 
     <script type="module" src="/js/main.js"></script>
 </head>
 
 <body>
+
 	<header>
     Play the Game using your <b>Hand</b> as controller via <b>Web Camera</b>.
   	</header>
@@ -33,8 +42,8 @@
       <div class="panel-cell panel-cell-center">
    	 	<div class="webcam-box-outer">
           <div class="webcam-box-inner">
-			<video id="video" autoplay playsinline muted width="272" height="240"></video>
-
+			<!-- <video id="video" autoplay playsinline muted width="272" height="240"></video> -->
+              <div id="webcam-container"></div>
 			   </div>
 		  </div>
     </div>
@@ -42,8 +51,14 @@
         <div class="panel-cell panel-cell-right panel-cell-fill">
         </div><!-- ./panel-cell -->
     </div>
+    <div id="label-container"></div>
+
+    <button id="start-button" onClick="init()">Start</button>
 
     <p id="copyright"><b>A QUIET GAME</b> by Darpan Goyal, Nhu Nguyen, and Pratyusha Pogaru.</p>
+
+    <script type="module" src="/js/main.js"></script>
+
 
 
 </body>
