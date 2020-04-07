@@ -15,29 +15,82 @@
  * =============================================================================
  */
 
+ /**
+Color Palette
+darkest-blue: #1F265C;
+darker-blue: #2D45BD;
+blue: #3593F3;
+lighter-blue: #65EDF5;
+
+purple: #4A194A;
+red: #9F2A42;
+orange: #E86746;
+yellow: #FEC362;
+lighter-green: #99F15D;
+green: #31AC51;
+darker-green: #1F5E66;
+
+lighter-gray: #82A0B5;
+gray: #455873;
+darker-gray: #272D45;
+ */
+
 html, body {
   background: #2a2a2a;
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+
 }
 body {
   display: flex;
   flex-direction: column;
 }
 button:focus {
-  outline: 0;
+  background-color: #3593F3;
+}
+
+button {
+  background-color: #2D45BD;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
+  font-weight: 400;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border: 0px;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+
+
+
+}
+.panel-cell #label-container {
+  font-family: 'Roboto', sans-serif;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  color: black;
+  padding: 30px;
+  font-size: 20px;
+  font-weight: 300;
+  left: 30px;
+  line-height: 1.1;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  top: 75px;
+  position: absolute;
 }
 
 /** Page header. **/
 header {
-  background-color: #ef6c00;
-  border-bottom: solid 1px rgba(0,0,0,0.4);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   color: rgba(255, 255, 255, 0.7);
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 300;
-  line-height: 1.45em;
   overflow: hidden;
   padding: 20px 0;
   position: relative;
@@ -47,6 +100,19 @@ header {
 header b {
   color: rgba(255, 255, 255, 1);
   font-weight: 400;
+}
+
+h2 {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.45em;
+  overflow: hidden;
+  padding: 20px 0;
+  position: relative;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 10px;
 }
 canvas {
     margin: 0 auto;
@@ -125,8 +191,9 @@ canvas {
   display: flex;
   flex-direction: row;
 }
+
 .panel-cell {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
   flex-grow: 0;
@@ -136,6 +203,12 @@ canvas {
 .panel-cell-fill {
   flex-grow: 1;
 }
+
+.panel-cell .panel-cell-fill-half {
+
+  flex-grow: 0.6;
+}
+
 .panel-cell p {
   color: #8b8b8b;
   font-size: 10px;
@@ -195,6 +268,7 @@ canvas {
 .webcam-box-inner {
   border: 1px solid #585858;
   border-radius: 4px;
+  height: 240px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -274,6 +348,45 @@ canvas {
   text-align: left;
   top: 50px;
   position: absolute;
+}
+.panel-cell-right 
+{
+
+}
+
+.line {
+  width: 557px;
+  height: 47px;
+  top: 10px;
+  border-bottom: 3px solid #808080;
+  position: absolute;
+}
+.panel-cell .panel-cell-inner {
+  background-color: #A9A9A9;
+  height: 240px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin: auto 10px;
+  width: 555px;
+  position: absolute;
+}
+.panel-cell .statistics-text
+{
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: bold;
+  left: 30px;
+  line-height: 1.1;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  top: 30px;
+  position: absolute;
+
 }
 .panel-row-top .panel-cell-left {
   background: url("./pointer.svg");
